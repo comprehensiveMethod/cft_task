@@ -1,7 +1,11 @@
 
 import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ArgsGetter {
     private String[] args;
@@ -11,9 +15,6 @@ public class ArgsGetter {
     }
     public ArgsData getDataFromArgs() throws IllegalArgumentException, IndexOutOfBoundsException{
         ArgsData argsData = new ArgsData();
-
-
-
 
         if(args[0].equals("-a")){
             if(args[1].equals("-s")){
@@ -59,7 +60,7 @@ public class ArgsGetter {
         argsData.setOutputFile(args[i]);
         args[i] = null;
 
-        List<String> inputFiles = new ArrayList<>();
+        Set<String> inputFiles = new HashSet<>();
         for(i = 0; i < args.length;i++){
             if(args[i]==null){
                 continue;

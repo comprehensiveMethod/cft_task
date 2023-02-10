@@ -1,9 +1,10 @@
 import java.util.List;
+import java.util.Set;
 
 public class ArgsData {
     private DataType dataType;
     private SortType sortType;
-    private List<String> inputFiles;
+    private Set<String> inputFiles;
     private String outputFile;
     public void setDataType(DataType dataType){
         this.dataType = dataType;
@@ -11,7 +12,7 @@ public class ArgsData {
     public void setSortType(SortType sortType){
         this.sortType = sortType;
     }
-    public void setInputFiles(List<String> inputFiles){
+    public void setInputFiles(Set<String> inputFiles){
         this.inputFiles = inputFiles;
     }
     public void setOutputFile(String outputFile){
@@ -23,7 +24,7 @@ public class ArgsData {
     public SortType getSortType(){
         return this.sortType;
     }
-    public List<String> getInputFiles(){
+    public Set<String> getInputFiles(){
         return this.inputFiles;
     }
     public String  getOutputFile(){
